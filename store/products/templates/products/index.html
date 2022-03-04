@@ -1,0 +1,36 @@
+{% extends 'products/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="mt-5">La pizza bomba</h1>
+                    <p>
+                        <br>
+                        Вкуснейшая горячая пицца из печи.
+                        <br>
+                        Бесплатная доставка на все заказы от 1 000 ₽!
+                        <br>
+                        При заказе трех пицц - четвертая в ПОДАРОК.
+                        <br>
+                        Для новых клиентов скидка на первый заказ - 10%
+                        <br>
+                        <br>
+                        
+                    </p>
+                    <button id="start-purchase-btn" type="button" class="btn btn-lg">
+                        <a id="start-purchase-link" href="{% url 'products:index' %}">
+                            Сделать заказ
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
